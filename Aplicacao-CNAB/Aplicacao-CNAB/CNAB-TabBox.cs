@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplicacao_CNAB
 {
-    public partial class Form1 : Form
+    public partial class CNAB_TabBox : Form
     {
-        public Form1()
+        public CNAB_TabBox()
         {
             InitializeComponent();
         }
