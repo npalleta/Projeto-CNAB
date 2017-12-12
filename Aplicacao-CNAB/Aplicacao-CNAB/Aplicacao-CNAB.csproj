@@ -45,14 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNABBL\CNABLogica.cs" />
     <Compile Include="CNAB-TabBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CNAB-TabBox.Designer.cs">
+    <Compile Include="CNAB-TabBox.designer.cs">
       <DependentUpon>CNAB-TabBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CNABBL\CNABHeaderBussinessClass.cs" />
-    <Compile Include="CNABBL\Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CNAB-TabBox.resx">
