@@ -13,17 +13,14 @@ namespace Aplicacao_CNAB.CNABBL
         {
             try
             {
-                if (texto == string.Empty && obrigatorio == false)
+                if (texto == string.Empty && obrigatorio || Regex.IsMatch(texto, "^[0-9]*$") == false)
                     _texto = "Err";
                 //
-                if (Regex.IsMatch(texto, @"^\d$") && texto.Length == tamanho)
+                else if (texto.Length == tamanho)
                     _texto = texto;
                 //
-                if (Regex.IsMatch(texto, @"^\d$") && texto.Length < tamanho)
+                else if (texto.Length < tamanho)
                     _texto = texto.PadRight(tamanho);
-                //
-                else
-                    _texto = "Err";
             }
             catch (Exception e)
             {
@@ -38,17 +35,14 @@ namespace Aplicacao_CNAB.CNABBL
         {
             try
             {
-                if (texto == string.Empty && obrigatorio == false)
+                if (texto == string.Empty && obrigatorio || Regex.IsMatch(texto, "^[a-zA-Z0-9]*$") == false)
                     _texto = "Err";
                 //
-                if (Regex.IsMatch(texto, "^[a-zA-Z0-9]*$") && texto.Length == tamanho)
+                else if (texto.Length == tamanho)
                     _texto = texto;
                 //
-                if (Regex.IsMatch(texto, "^[a-zA-Z0-9]*$") && texto.Length < tamanho)
+                else if (texto.Length < tamanho)
                     _texto = texto.PadRight(tamanho);
-                //
-                else
-                    _texto = "Err";
             }
             catch (Exception e)
             {
