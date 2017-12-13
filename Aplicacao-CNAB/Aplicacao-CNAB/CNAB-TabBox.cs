@@ -70,7 +70,7 @@ namespace Aplicacao_CNAB
             return new[] { texto };
         }
 
-        private void bt1_Click(object sender, EventArgs e)
+        private void bt1_Click_1(object sender, EventArgs e)
         {
             _logica.GeraArquivo(GeraRegistroHeader(), _validacaoGeraRegHeader);
         }

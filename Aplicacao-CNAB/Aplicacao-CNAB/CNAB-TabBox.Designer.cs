@@ -244,6 +244,7 @@
             // 
             // SplitContainer1.Panel1
             // 
+            this.SplitContainer1.Panel1.BackColor = System.Drawing.Color.White;
             this.SplitContainer1.Panel1.Controls.Add(this.PictureBox1);
             this.SplitContainer1.Panel1.Controls.Add(this.Label1);
             // 
@@ -391,6 +392,7 @@
             this.bt1.TabIndex = 76;
             this.bt1.Text = "Próximo";
             this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click_1);
             // 
             // txtbox18
             // 
@@ -2200,11 +2202,11 @@
             // Label85
             // 
             this.Label85.AutoSize = true;
-            this.Label85.Location = new System.Drawing.Point(20, 72);
+            this.Label85.Location = new System.Drawing.Point(19, 72);
             this.Label85.Name = "Label85";
-            this.Label85.Size = new System.Drawing.Size(122, 18);
+            this.Label85.Size = new System.Drawing.Size(123, 18);
             this.Label85.TabIndex = 102;
-            this.Label85.Text = "Nome do arquivo";
+            this.Label85.Text = "Nome do Arquivo";
             // 
             // txtbox80
             // 
@@ -2218,9 +2220,9 @@
             this.Label84.AutoSize = true;
             this.Label84.Location = new System.Drawing.Point(20, 102);
             this.Label84.Name = "Label84";
-            this.Label84.Size = new System.Drawing.Size(104, 18);
+            this.Label84.Size = new System.Drawing.Size(105, 18);
             this.Label84.TabIndex = 100;
-            this.Label84.Text = "Nº de arquivos";
+            this.Label84.Text = "Nº de Arquivos";
             // 
             // txtbox79
             // 
@@ -2242,7 +2244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(843, 595);
             this.Controls.Add(this.SplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
