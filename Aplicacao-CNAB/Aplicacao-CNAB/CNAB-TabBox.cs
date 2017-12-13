@@ -9,7 +9,7 @@ namespace Aplicacao_CNAB
     {
         private readonly CnabLogica _logica;
         private bool _validacaoGeraRegHeader;
-        private const string MensagemErro = "Existe(m) preenchimento(s) indevido(s) ou campo(s) vazio(s)";
+        private const string MensagemErro = "Existe(m) preenchimento(s) indevido(s) ou campo(s) vazio(s)!";
 
         public CnabTabBox()
         {

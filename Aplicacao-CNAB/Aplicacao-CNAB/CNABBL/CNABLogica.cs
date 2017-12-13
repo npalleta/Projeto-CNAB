@@ -13,14 +13,27 @@ namespace Aplicacao_CNAB.CNABBL
         {
             try
             {
-                if (texto == string.Empty && obrigatorio || Regex.IsMatch(texto, "^[0-9]*$") == false)
+                if (texto != null)
+                {
+                    if (texto != "" && obrigatorio)
+                    {
+                        if (Regex.IsMatch(texto, "^[0-9]*$") == false)
+                            _texto = "Err";
+                        //
+                        else if (texto.Length == tamanho)
+                            _texto = texto;
+                        //
+                        else if (texto.Length < tamanho)
+                            _texto = texto.PadRight(tamanho);
+                    }
+                    else if (!obrigatorio)
+                        _texto = texto.PadRight(tamanho);
+                    //
+                    else
+                        _texto = "Err";
+                }
+                else
                     _texto = "Err";
-                //
-                else if (texto.Length == tamanho)
-                    _texto = texto;
-                //
-                else if (texto.Length < tamanho)
-                    _texto = texto.PadRight(tamanho);
             }
             catch (Exception e)
             {
@@ -35,14 +48,27 @@ namespace Aplicacao_CNAB.CNABBL
         {
             try
             {
-                if (texto == string.Empty && obrigatorio || Regex.IsMatch(texto, "^[a-zA-Z0-9]*$") == false)
+                if (texto != null)
+                {
+                    if (texto != "" && obrigatorio)
+                    {
+                        if (Regex.IsMatch(texto, "^[a-zA-Z0-9]*$") == false)
+                            _texto = "Err";
+                        //
+                        else if (texto.Length == tamanho)
+                            _texto = texto;
+                        //
+                        else if (texto.Length < tamanho)
+                            _texto = texto.PadRight(tamanho);
+                    }
+                    else if (!obrigatorio)
+                        _texto = texto.PadRight(tamanho);
+                    //
+                    else
+                        _texto = "Err";
+                }
+                else
                     _texto = "Err";
-                //
-                else if (texto.Length == tamanho)
-                    _texto = texto;
-                //
-                else if (texto.Length < tamanho)
-                    _texto = texto.PadRight(tamanho);
             }
             catch (Exception e)
             {
@@ -58,7 +84,7 @@ namespace Aplicacao_CNAB.CNABBL
             var flag = true;
             try
             {
-                if (string.Equals(str, "Err") || string.IsNullOrEmpty(str))
+                if (string.IsNullOrEmpty(str) || string.Equals(str, "Err"))
                     flag = false;
             }
             catch (Exception exception)
