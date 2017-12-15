@@ -9,7 +9,7 @@ namespace Aplicacao_CNAB.CNABBL
     {
         private string _texto = "";
 
-        public string VerificaNumerosETamanhoTexto(string texto, int tamanho, bool obrigatorio)
+        public string ValidaNumerosEPreenchimentoEsquerda(string texto, int tamanho, bool obrigatorio)
         {
             try
             {
@@ -24,10 +24,10 @@ namespace Aplicacao_CNAB.CNABBL
                             _texto = texto;
                         //
                         else if (texto.Length < tamanho)
-                            _texto = texto.PadRight(tamanho);
+                            _texto = texto.PadLeft(tamanho, '0');
                     }
                     else if (!obrigatorio)
-                        _texto = texto.PadRight(tamanho);
+                        _texto = texto.PadLeft(tamanho, '0');
                     //
                     else
                         _texto = "Err";
@@ -44,7 +44,7 @@ namespace Aplicacao_CNAB.CNABBL
             return _texto;
         }
 
-        public string VerificaAlfanumericoETamanhoTexto(string texto, int tamanho, bool obrigatorio)
+        public string ValidaAlfanumericoEPreenchimentoDireita(string texto, int tamanho, bool obrigatorio)
         {
             try
             {
@@ -95,7 +95,10 @@ namespace Aplicacao_CNAB.CNABBL
             return flag;
         }
 
-        public string ValidaCodigoBanco(bool retorno) => retorno ? "353" : "033";
+        public string RetornaValorComboBox(string str, string val)
+        {
+            return string.IsNullOrEmpty(str) ? val : str;
+        }
 
         public string GeraRandomico()
         {
@@ -126,7 +129,13 @@ namespace Aplicacao_CNAB.CNABBL
             return randomico;
         }
 
-        public void GeraArquivo(string[] registro, bool statusValidacao)
+        public int GeraNumerorRandomico(int min, int max)
+        {
+            var random = new Random();
+            return random.Next(min, max);
+        }
+
+        public void GeraArquivo(bool statusValidacao, params string[] registro)
         {
             try
             {

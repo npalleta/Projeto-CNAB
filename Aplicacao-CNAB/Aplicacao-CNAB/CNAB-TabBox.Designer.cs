@@ -36,8 +36,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtbox9 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.bt1 = new System.Windows.Forms.Button();
             this.txtbox18 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -77,12 +77,13 @@
             this.Label20 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtbox46 = new System.Windows.Forms.DateTimePicker();
             this.txtbox26 = new System.Windows.Forms.DateTimePicker();
             this.txtbox37 = new System.Windows.Forms.DateTimePicker();
             this.txtbox33 = new System.Windows.Forms.DateTimePicker();
             this.txtbox42 = new System.Windows.Forms.DateTimePicker();
-            this.CheckBox3 = new System.Windows.Forms.CheckBox();
             this.CheckBox4 = new System.Windows.Forms.CheckBox();
+            this.CheckBox3 = new System.Windows.Forms.CheckBox();
             this.CheckBox2 = new System.Windows.Forms.CheckBox();
             this.CheckBox1 = new System.Windows.Forms.CheckBox();
             this.bt2 = new System.Windows.Forms.Button();
@@ -126,7 +127,6 @@
             this.txtbox47 = new System.Windows.Forms.TextBox();
             this.txtbox48 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.txtbox46 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.txtbox45 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -141,8 +141,8 @@
             this.label43 = new System.Windows.Forms.Label();
             this.txtbox39 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label41 = new System.Windows.Forms.Label();
             this.txtbox38 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -213,12 +213,10 @@
             this.Label83 = new System.Windows.Forms.Label();
             this.txtbox66 = new System.Windows.Forms.TextBox();
             this.TabPage4 = new System.Windows.Forms.TabPage();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.Label85 = new System.Windows.Forms.Label();
+            this.btn1 = new System.Windows.Forms.Button();
             this.txtbox80 = new System.Windows.Forms.TextBox();
             this.Label84 = new System.Windows.Forms.Label();
-            this.txtbox79 = new System.Windows.Forms.TextBox();
-            this.bt6 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer1)).BeginInit();
             this.SplitContainer1.Panel1.SuspendLayout();
@@ -283,7 +281,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.TabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(5, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(816, 474);
@@ -303,8 +301,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtbox9);
-            this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.bt1);
             this.groupBox2.Controls.Add(this.txtbox18);
             this.groupBox2.Controls.Add(this.label19);
@@ -361,28 +359,28 @@
             this.txtbox9.TabIndex = 93;
             this.txtbox9.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(258, 247);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 22);
-            this.radioButton2.TabIndex = 64;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "033";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(211, 247);
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(212, 247);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(50, 22);
-            this.radioButton1.TabIndex = 63;
+            this.radioButton1.TabIndex = 64;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "353";
+            this.radioButton1.Text = "033";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(262, 247);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(50, 22);
+            this.radioButton2.TabIndex = 63;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "353";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // bt1
             // 
@@ -746,12 +744,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtbox46);
             this.groupBox1.Controls.Add(this.txtbox26);
             this.groupBox1.Controls.Add(this.txtbox37);
             this.groupBox1.Controls.Add(this.txtbox33);
             this.groupBox1.Controls.Add(this.txtbox42);
-            this.groupBox1.Controls.Add(this.CheckBox3);
             this.groupBox1.Controls.Add(this.CheckBox4);
+            this.groupBox1.Controls.Add(this.CheckBox3);
             this.groupBox1.Controls.Add(this.CheckBox2);
             this.groupBox1.Controls.Add(this.CheckBox1);
             this.groupBox1.Controls.Add(this.bt2);
@@ -795,7 +794,6 @@
             this.groupBox1.Controls.Add(this.txtbox47);
             this.groupBox1.Controls.Add(this.txtbox48);
             this.groupBox1.Controls.Add(this.label50);
-            this.groupBox1.Controls.Add(this.txtbox46);
             this.groupBox1.Controls.Add(this.label49);
             this.groupBox1.Controls.Add(this.txtbox45);
             this.groupBox1.Controls.Add(this.label48);
@@ -810,8 +808,8 @@
             this.groupBox1.Controls.Add(this.label43);
             this.groupBox1.Controls.Add(this.txtbox39);
             this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton6);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.label41);
             this.groupBox1.Controls.Add(this.txtbox38);
             this.groupBox1.Controls.Add(this.label40);
@@ -858,6 +856,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conteúdo";
             // 
+            // txtbox46
+            // 
+            this.txtbox46.CustomFormat = "dd/MM/yy";
+            this.txtbox46.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtbox46.Location = new System.Drawing.Point(636, 153);
+            this.txtbox46.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.txtbox46.Name = "txtbox46";
+            this.txtbox46.Size = new System.Drawing.Size(116, 24);
+            this.txtbox46.TabIndex = 125;
+            this.txtbox46.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            // 
             // txtbox26
             // 
             this.txtbox26.CustomFormat = "dd/MM/yy";
@@ -902,27 +911,30 @@
             this.txtbox42.TabIndex = 121;
             this.txtbox42.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
             // 
-            // CheckBox3
-            // 
-            this.CheckBox3.AutoSize = true;
-            this.CheckBox3.Location = new System.Drawing.Point(692, 273);
-            this.CheckBox3.Name = "CheckBox3";
-            this.CheckBox3.Size = new System.Drawing.Size(61, 22);
-            this.CheckBox3.TabIndex = 120;
-            this.CheckBox3.Text = "CGC";
-            this.CheckBox3.UseVisualStyleBackColor = true;
-            // 
             // CheckBox4
             // 
             this.CheckBox4.AutoSize = true;
-            this.CheckBox4.Checked = true;
-            this.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckBox4.Location = new System.Drawing.Point(636, 273);
+            this.CheckBox4.Location = new System.Drawing.Point(692, 273);
             this.CheckBox4.Name = "CheckBox4";
-            this.CheckBox4.Size = new System.Drawing.Size(57, 22);
-            this.CheckBox4.TabIndex = 119;
-            this.CheckBox4.Text = "CPF";
+            this.CheckBox4.Size = new System.Drawing.Size(61, 22);
+            this.CheckBox4.TabIndex = 120;
+            this.CheckBox4.Text = "CGC";
             this.CheckBox4.UseVisualStyleBackColor = true;
+            this.CheckBox4.CheckedChanged += new System.EventHandler(this.CheckBox3_CheckedChanged);
+            // 
+            // CheckBox3
+            // 
+            this.CheckBox3.AutoSize = true;
+            this.CheckBox3.Checked = true;
+            this.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CheckBox3.Enabled = false;
+            this.CheckBox3.Location = new System.Drawing.Point(636, 273);
+            this.CheckBox3.Name = "CheckBox3";
+            this.CheckBox3.Size = new System.Drawing.Size(57, 22);
+            this.CheckBox3.TabIndex = 119;
+            this.CheckBox3.Text = "CPF";
+            this.CheckBox3.UseVisualStyleBackColor = true;
+            this.CheckBox3.CheckedChanged += new System.EventHandler(this.CheckBox4_CheckedChanged);
             // 
             // CheckBox2
             // 
@@ -933,18 +945,21 @@
             this.CheckBox2.TabIndex = 118;
             this.CheckBox2.Text = "CGC";
             this.CheckBox2.UseVisualStyleBackColor = true;
+            this.CheckBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
             // 
             // CheckBox1
             // 
             this.CheckBox1.AutoSize = true;
             this.CheckBox1.Checked = true;
             this.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CheckBox1.Enabled = false;
             this.CheckBox1.Location = new System.Drawing.Point(263, 64);
             this.CheckBox1.Name = "CheckBox1";
             this.CheckBox1.Size = new System.Drawing.Size(57, 22);
             this.CheckBox1.TabIndex = 117;
             this.CheckBox1.Text = "CPF";
             this.CheckBox1.UseVisualStyleBackColor = true;
+            this.CheckBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
             // bt2
             // 
@@ -954,6 +969,7 @@
             this.bt2.TabIndex = 116;
             this.bt2.Text = "Anterior";
             this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // bt3
             // 
@@ -963,6 +979,7 @@
             this.bt3.TabIndex = 115;
             this.bt3.Text = "Próximo";
             this.bt3.UseVisualStyleBackColor = true;
+            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // txtbox61
             // 
@@ -1318,15 +1335,6 @@
             this.label50.TabIndex = 74;
             this.label50.Text = "Valor do IOF";
             // 
-            // txtbox46
-            // 
-            this.txtbox46.Location = new System.Drawing.Point(637, 153);
-            this.txtbox46.MaxLength = 6;
-            this.txtbox46.Name = "txtbox46";
-            this.txtbox46.ShortcutsEnabled = false;
-            this.txtbox46.Size = new System.Drawing.Size(116, 24);
-            this.txtbox46.TabIndex = 73;
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -1472,28 +1480,28 @@
             this.label42.TabIndex = 58;
             this.label42.Text = "Código da Agência Cobradora";
             // 
-            // radioButton5
+            // radioButton3
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(319, 666);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(50, 22);
-            this.radioButton5.TabIndex = 57;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "033";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Location = new System.Drawing.Point(272, 666);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(50, 22);
+            this.radioButton3.TabIndex = 57;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "033";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // radioButton4
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(270, 665);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(50, 22);
-            this.radioButton6.TabIndex = 56;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "353";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(322, 666);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(50, 22);
+            this.radioButton4.TabIndex = 56;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "353";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // label41
             // 
@@ -1916,7 +1924,7 @@
             this.groupBox3.Size = new System.Drawing.Size(802, 437);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Conteudo";
+            this.groupBox3.Text = "Conteúdo";
             // 
             // bt4
             // 
@@ -2178,12 +2186,10 @@
             // 
             // TabPage4
             // 
-            this.TabPage4.Controls.Add(this.TextBox1);
-            this.TabPage4.Controls.Add(this.Label85);
+            this.TabPage4.Controls.Add(this.btn1);
             this.TabPage4.Controls.Add(this.txtbox80);
             this.TabPage4.Controls.Add(this.Label84);
-            this.TabPage4.Controls.Add(this.txtbox79);
-            this.TabPage4.Controls.Add(this.bt6);
+            this.TabPage4.Controls.Add(this.btn2);
             this.TabPage4.Location = new System.Drawing.Point(4, 27);
             this.TabPage4.Name = "TabPage4";
             this.TabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -2192,25 +2198,18 @@
             this.TabPage4.Text = "Gerar Arquivo";
             this.TabPage4.UseVisualStyleBackColor = true;
             // 
-            // TextBox1
+            // btn1
             // 
-            this.TextBox1.Location = new System.Drawing.Point(23, 134);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(385, 24);
-            this.TextBox1.TabIndex = 103;
-            // 
-            // Label85
-            // 
-            this.Label85.AutoSize = true;
-            this.Label85.Location = new System.Drawing.Point(19, 72);
-            this.Label85.Name = "Label85";
-            this.Label85.Size = new System.Drawing.Size(123, 18);
-            this.Label85.TabIndex = 102;
-            this.Label85.Text = "Nome do Arquivo";
+            this.btn1.Location = new System.Drawing.Point(439, 16);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(105, 66);
+            this.btn1.TabIndex = 102;
+            this.btn1.Text = "Adicionar Linha(s)";
+            this.btn1.UseVisualStyleBackColor = true;
             // 
             // txtbox80
             // 
-            this.txtbox80.Location = new System.Drawing.Point(148, 99);
+            this.txtbox80.Location = new System.Drawing.Point(271, 38);
             this.txtbox80.Name = "txtbox80";
             this.txtbox80.Size = new System.Drawing.Size(100, 24);
             this.txtbox80.TabIndex = 101;
@@ -2218,27 +2217,20 @@
             // Label84
             // 
             this.Label84.AutoSize = true;
-            this.Label84.Location = new System.Drawing.Point(20, 102);
+            this.Label84.Location = new System.Drawing.Point(43, 39);
             this.Label84.Name = "Label84";
-            this.Label84.Size = new System.Drawing.Size(105, 18);
+            this.Label84.Size = new System.Drawing.Size(220, 18);
             this.Label84.TabIndex = 100;
-            this.Label84.Text = "Nº de Arquivos";
+            this.Label84.Text = "Nº de Registro(s) de Movimento";
             // 
-            // txtbox79
+            // btn2
             // 
-            this.txtbox79.Location = new System.Drawing.Point(148, 69);
-            this.txtbox79.Name = "txtbox79";
-            this.txtbox79.Size = new System.Drawing.Size(100, 24);
-            this.txtbox79.TabIndex = 99;
-            // 
-            // bt6
-            // 
-            this.bt6.Location = new System.Drawing.Point(303, 62);
-            this.bt6.Name = "bt6";
-            this.bt6.Size = new System.Drawing.Size(105, 66);
-            this.bt6.TabIndex = 98;
-            this.bt6.Text = "Gerar Arquivo CNAB";
-            this.bt6.UseVisualStyleBackColor = true;
+            this.btn2.Location = new System.Drawing.Point(570, 16);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(105, 66);
+            this.btn2.TabIndex = 98;
+            this.btn2.Text = "Gerar Arquivo CNAB";
+            this.btn2.UseVisualStyleBackColor = true;
             // 
             // CnabTabBox
             // 
@@ -2281,8 +2273,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.DateTimePicker txtbox9;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button bt1;
         private System.Windows.Forms.TextBox txtbox18;
         private System.Windows.Forms.Label label19;
@@ -2326,8 +2318,8 @@
         internal System.Windows.Forms.DateTimePicker txtbox37;
         internal System.Windows.Forms.DateTimePicker txtbox33;
         internal System.Windows.Forms.DateTimePicker txtbox42;
-        internal System.Windows.Forms.CheckBox CheckBox3;
         internal System.Windows.Forms.CheckBox CheckBox4;
+        internal System.Windows.Forms.CheckBox CheckBox3;
         internal System.Windows.Forms.CheckBox CheckBox2;
         internal System.Windows.Forms.CheckBox CheckBox1;
         private System.Windows.Forms.Button bt2;
@@ -2371,7 +2363,6 @@
         private System.Windows.Forms.TextBox txtbox47;
         private System.Windows.Forms.TextBox txtbox48;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox txtbox46;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtbox45;
         private System.Windows.Forms.Label label48;
@@ -2386,8 +2377,8 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtbox39;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtbox38;
         private System.Windows.Forms.Label label40;
@@ -2458,11 +2449,10 @@
         private System.Windows.Forms.Label Label83;
         private System.Windows.Forms.TextBox txtbox66;
         internal System.Windows.Forms.TabPage TabPage4;
-        internal System.Windows.Forms.TextBox TextBox1;
-        internal System.Windows.Forms.Label Label85;
         internal System.Windows.Forms.TextBox txtbox80;
         internal System.Windows.Forms.Label Label84;
-        internal System.Windows.Forms.TextBox txtbox79;
-        internal System.Windows.Forms.Button bt6;
+        internal System.Windows.Forms.Button btn2;
+        internal System.Windows.Forms.DateTimePicker txtbox46;
+        internal System.Windows.Forms.Button btn1;
     }
 }
