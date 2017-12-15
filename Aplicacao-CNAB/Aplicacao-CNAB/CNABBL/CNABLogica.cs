@@ -7,7 +7,7 @@ namespace Aplicacao_CNAB.CNABBL
 {
     public class CnabLogica
     {
-        private string _texto = "";
+        private string _texto = string.Empty;
 
         public string ValidaNumerosEPreenchimentoEsquerda(string texto, int tamanho, bool obrigatorio)
         {

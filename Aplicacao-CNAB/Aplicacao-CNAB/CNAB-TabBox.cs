@@ -19,7 +19,7 @@ namespace Aplicacao_CNAB
 
         public string[] GeraRegistroHeader()
         {
-            var texto = "";
+            var texto = string.Empty;
             //
             try
             {
@@ -68,7 +68,7 @@ namespace Aplicacao_CNAB
 
         public string[] GeraRegistroMovimento()
         {
-            var texto = "";
+            var texto = string.Empty;
             //
             try
             {
@@ -143,13 +143,12 @@ namespace Aplicacao_CNAB
             {
                 MessageBox.Show(ex.ToString());
             }
-            return new[] { texto
-};
+            return new[] { texto };
         }
 
         public string[] GeraRegistroMovimentoMsg()
         {
-            var texto = "";
+            var texto = string.Empty;
             //
             try
             {
