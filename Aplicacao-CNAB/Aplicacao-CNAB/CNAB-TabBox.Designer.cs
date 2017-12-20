@@ -1,4 +1,6 @@
-﻿namespace Aplicacao_CNAB
+﻿using System.Windows.Forms;
+
+namespace Aplicacao_CNAB
 {
     partial class CnabTabBox
     {
@@ -213,7 +215,7 @@
             this.Label83 = new System.Windows.Forms.Label();
             this.txtbox66 = new System.Windows.Forms.TextBox();
             this.TabPage4 = new System.Windows.Forms.TabPage();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
             this.txtbox80 = new System.Windows.Forms.TextBox();
             this.Label84 = new System.Windows.Forms.Label();
             this.btn2 = new System.Windows.Forms.Button();
@@ -256,7 +258,7 @@
             // PictureBox1
             // 
             this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(584, 5);
+            this.PictureBox1.Location = new System.Drawing.Point(3, 3);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(231, 84);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,8 +269,8 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.Label1.ForeColor = System.Drawing.Color.Red;
-            this.Label1.Location = new System.Drawing.Point(2, 28);
+            this.Label1.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.Label1.Location = new System.Drawing.Point(233, 27);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(588, 37);
             this.Label1.TabIndex = 3;
@@ -357,7 +359,7 @@
             this.txtbox9.Name = "txtbox9";
             this.txtbox9.Size = new System.Drawing.Size(116, 24);
             this.txtbox9.TabIndex = 93;
-            this.txtbox9.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox9.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // radioButton1
             // 
@@ -390,7 +392,7 @@
             this.bt1.TabIndex = 76;
             this.bt1.Text = "Próximo";
             this.bt1.UseVisualStyleBackColor = true;
-            this.bt1.Click += new System.EventHandler(this.bt1_Click_1);
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
             // 
             // txtbox18
             // 
@@ -865,7 +867,7 @@
             this.txtbox46.Name = "txtbox46";
             this.txtbox46.Size = new System.Drawing.Size(116, 24);
             this.txtbox46.TabIndex = 125;
-            this.txtbox46.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox46.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txtbox26
             // 
@@ -876,7 +878,7 @@
             this.txtbox26.Name = "txtbox26";
             this.txtbox26.Size = new System.Drawing.Size(116, 24);
             this.txtbox26.TabIndex = 124;
-            this.txtbox26.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox26.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txtbox37
             // 
@@ -887,7 +889,7 @@
             this.txtbox37.Name = "txtbox37";
             this.txtbox37.Size = new System.Drawing.Size(116, 24);
             this.txtbox37.TabIndex = 123;
-            this.txtbox37.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox37.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txtbox33
             // 
@@ -898,7 +900,7 @@
             this.txtbox33.Name = "txtbox33";
             this.txtbox33.Size = new System.Drawing.Size(116, 24);
             this.txtbox33.TabIndex = 122;
-            this.txtbox33.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox33.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txtbox42
             // 
@@ -909,7 +911,7 @@
             this.txtbox42.Name = "txtbox42";
             this.txtbox42.Size = new System.Drawing.Size(116, 24);
             this.txtbox42.TabIndex = 121;
-            this.txtbox42.Value = new System.DateTime(2017, 12, 12, 0, 0, 0, 0);
+            this.txtbox42.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // CheckBox4
             // 
@@ -969,7 +971,6 @@
             this.bt2.TabIndex = 116;
             this.bt2.Text = "Anterior";
             this.bt2.UseVisualStyleBackColor = true;
-            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // bt3
             // 
@@ -979,7 +980,6 @@
             this.bt3.TabIndex = 115;
             this.bt3.Text = "Próximo";
             this.bt3.UseVisualStyleBackColor = true;
-            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // txtbox61
             // 
@@ -1004,6 +1004,7 @@
             this.txtbox65.Location = new System.Drawing.Point(637, 750);
             this.txtbox65.MaxLength = 6;
             this.txtbox65.Name = "txtbox65";
+            this.txtbox65.ReadOnly = true;
             this.txtbox65.ShortcutsEnabled = false;
             this.txtbox65.Size = new System.Drawing.Size(116, 24);
             this.txtbox65.TabIndex = 113;
@@ -1551,7 +1552,7 @@
             // txtbox36
             // 
             this.txtbox36.Location = new System.Drawing.Point(263, 576);
-            this.txtbox36.MaxLength = 10;
+            this.txtbox36.MaxLength = 3;
             this.txtbox36.Name = "txtbox36";
             this.txtbox36.ShortcutsEnabled = false;
             this.txtbox36.Size = new System.Drawing.Size(117, 24);
@@ -1745,7 +1746,7 @@
             // txtbox25
             // 
             this.txtbox25.Location = new System.Drawing.Point(264, 242);
-            this.txtbox25.MaxLength = 8;
+            this.txtbox25.MaxLength = 3;
             this.txtbox25.Name = "txtbox25";
             this.txtbox25.ShortcutsEnabled = false;
             this.txtbox25.Size = new System.Drawing.Size(116, 24);
@@ -1940,6 +1941,7 @@
             this.txtbox78.Location = new System.Drawing.Point(565, 201);
             this.txtbox78.MaxLength = 6;
             this.txtbox78.Name = "txtbox78";
+            this.txtbox78.ReadOnly = true;
             this.txtbox78.ShortcutsEnabled = false;
             this.txtbox78.Size = new System.Drawing.Size(100, 24);
             this.txtbox78.TabIndex = 140;
@@ -2186,7 +2188,7 @@
             // 
             // TabPage4
             // 
-            this.TabPage4.Controls.Add(this.btn1);
+            this.TabPage4.Controls.Add(this.btn4);
             this.TabPage4.Controls.Add(this.txtbox80);
             this.TabPage4.Controls.Add(this.Label84);
             this.TabPage4.Controls.Add(this.btn2);
@@ -2198,14 +2200,15 @@
             this.TabPage4.Text = "Gerar Arquivo";
             this.TabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn1
+            // btn4
             // 
-            this.btn1.Location = new System.Drawing.Point(439, 16);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(105, 66);
-            this.btn1.TabIndex = 102;
-            this.btn1.Text = "Adicionar Linha(s)";
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btn4.Location = new System.Drawing.Point(396, 17);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(105, 66);
+            this.btn4.TabIndex = 102;
+            this.btn4.Text = "Adicionar Linha(s)";
+            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // txtbox80
             // 
@@ -2213,6 +2216,7 @@
             this.txtbox80.Name = "txtbox80";
             this.txtbox80.Size = new System.Drawing.Size(100, 24);
             this.txtbox80.TabIndex = 101;
+            this.txtbox80.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox80_KeyPress);
             // 
             // Label84
             // 
@@ -2225,12 +2229,13 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(570, 16);
+            this.btn2.Location = new System.Drawing.Point(524, 17);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(105, 66);
             this.btn2.TabIndex = 98;
             this.btn2.Text = "Gerar Arquivo CNAB";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // CnabTabBox
             // 
@@ -2242,6 +2247,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CnabTabBox";
             this.Text = "ARQUIVO REMESSA CNAB";
+            this.Load += new System.EventHandler(this.CnabTabBox_Load);
             this.SplitContainer1.Panel1.ResumeLayout(false);
             this.SplitContainer1.Panel1.PerformLayout();
             this.SplitContainer1.Panel2.ResumeLayout(false);
@@ -2261,7 +2267,6 @@
             this.TabPage4.ResumeLayout(false);
             this.TabPage4.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -2453,6 +2458,6 @@
         internal System.Windows.Forms.Label Label84;
         internal System.Windows.Forms.Button btn2;
         internal System.Windows.Forms.DateTimePicker txtbox46;
-        internal System.Windows.Forms.Button btn1;
+        internal Button btn4;
     }
 }
