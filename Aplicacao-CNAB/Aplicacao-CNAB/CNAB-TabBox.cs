@@ -14,6 +14,8 @@ namespace Aplicacao_CNAB
         private readonly List<string[]> _listaRegistroMovimento;
         private const string MensagemErro = "Existe(m) preenchimento(s) indevido(s) ou campo(s) vazio(s)!";
 
+        public int ValidacaoGeraArquivo { get; set; }
+
         public CnabTabBox()
         {
             InitializeComponent();
@@ -296,16 +298,25 @@ namespace Aplicacao_CNAB
                 else
                 {
                     var listaLinhasRegMov = _logica.TransformaMatrizEmListas(_listaRegistroMovimento);
-                    var flag = _logica.GeraArquivo(_validacaoGeraRegistro, GeraRegistroHeader(), listaLinhasRegMov, GeraRegistroMovimentoMsg());
-                    if (!flag)
+                    var statusGeracaoArq = _logica.GeraArquivo(_validacaoGeraRegistro, GeraRegistroHeader(), listaLinhasRegMov, GeraRegistroMovimentoMsg());
+                    //
+                    switch (statusGeracaoArq)
                     {
-                        return;
-                    }
-                    else
-                    {
-                        _numSeqReg = 1;
-                        _listaRegistroMovimento.Clear();
-                        txtbox80.Text = string.Empty;
+                        case 0:
+                            _numSeqReg = 1;
+                            _listaRegistroMovimento.Clear();
+                            txtbox80.Text = string.Empty;
+                            break;
+                        case 1:
+                            //
+                            break;
+                        case 2:
+                            _numSeqReg = 1;
+                            _listaRegistroMovimento.Clear();
+                            txtbox80.Text = string.Empty;
+                            break;
+                        default:
+                            return;
                     }
                 }
             }

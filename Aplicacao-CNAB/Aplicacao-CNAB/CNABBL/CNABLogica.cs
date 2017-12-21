@@ -155,51 +155,49 @@ namespace Aplicacao_CNAB.CNABBL
             return random.Next(min, max).ToString();
         }
 
-        public bool GeraArquivo(bool statusValidacao, string[] registroHeader, string[] registroMoviment,
-                string[] registroMovimentMsg)
-        // public void GeraArquivo(bool statusValidacao, params string[] registros)
+        public int GeraArquivo(bool statusValidacao, string[] registroHeader, string[] registroMoviment, string[] registroMovimentMsg)
         {
-            var flag = true;
+            var numVerificador = 0;
             //
             try
             {
-                if (!statusValidacao) return false;
-                var folderBrowserDialog = new FolderBrowserDialog
+                if (statusValidacao)
                 {
-                    Description = @"Selecione a pasta onde será criado o arquivo:"
-                };
-                var showDialog = folderBrowserDialog.ShowDialog();
-                //
-                if (showDialog == DialogResult.OK)
-                {
-                    var diretorio = Path.Combine(folderBrowserDialog.SelectedPath, GeraNomeArquivo());
-                    var arquivo = registroHeader.Concat(registroMoviment).Concat(registroMovimentMsg);
-                    File.WriteAllLines(diretorio, arquivo);
-                    MessageBox.Show(@"O arquivo CNAB foi gerado com sucesso!", @"Arquivo CNAB", MessageBoxButtons.OK, MessageBoxIcon.None);
-                }
-                else if (showDialog == DialogResult.Cancel)
-                {
-                    var result = MessageBox.Show(@"Você realmente deseja cancelar a geração do CNAB?", @"Cancela Geração - Arquivo CNAB", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    //
-                    switch (result)
+                    var folderBrowserDialog = new FolderBrowserDialog
                     {
-                        case DialogResult.No:
-                            //
-                            break;
-                        case DialogResult.Yes:
-                            flag = false;
-                            break;
+                        Description = @"Selecione a pasta onde será criado o arquivo:"
+                    };
+                    var showDialog = folderBrowserDialog.ShowDialog();
+                    //
+                    if (showDialog == DialogResult.OK)
+                    {
+                        var diretorio = Path.Combine(folderBrowserDialog.SelectedPath, GeraNomeArquivo());
+                        var arquivo = registroHeader.Concat(registroMoviment).Concat(registroMovimentMsg);
+                        // var nomeArquivo = "CNAB_" + GeraRandomico() + ".txt";
+                        File.WriteAllLines(diretorio, arquivo);
+                    }
+                    else if (showDialog == DialogResult.Cancel)
+                    {
+                        var result = MessageBox.Show(@"Você realmente deseja cancelar a geração do CNAB?", @"Cancela Geração - Arquivo CNAB", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //
+                        switch (result)
+                        {
+                            case DialogResult.No:
+                                numVerificador = 1;
+                                break;
+                            case DialogResult.Yes:
+                                numVerificador = 2;
+                                break;
+                        }
                     }
                 }
-                // var nomeArquivo = "CNAB_" + GeraRandomico() + ".txt";
             }
-
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
                 throw;
             }
-            return flag;
+            return numVerificador;
         }
 
         public string[] TransformaMatrizEmListas(List<string[]> matriz)
