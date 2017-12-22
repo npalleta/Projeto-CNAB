@@ -145,8 +145,7 @@ namespace Aplicacao_CNAB.CNABBL
             return int.Parse(string.Join(",", numeros).Replace(",", "")); ;
         } */
 
-        public string GeraNomeArquivo() =>
-            $"CNAB_{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss", CultureInfo.InvariantCulture)}.txt";
+        public string GeraNomeArquivo() => $"CNAB_{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss", CultureInfo.InvariantCulture)}.txt";
 
         public string GeraNumerosRandomicos(int min, int max)
         {
