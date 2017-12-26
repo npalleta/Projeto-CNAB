@@ -25,7 +25,7 @@ namespace Aplicacao_CNAB
             _listaRegistroMovimento = new List<string[]>();
         }
 
-        private string[] GeraRegistroHeader()
+        internal string[] GeraRegistroHeader()
         {
             var texto = string.Empty;
             //
@@ -74,7 +74,7 @@ namespace Aplicacao_CNAB
             return new[] { texto };
         }
 
-        private string[] GeraRegistroMovimento(int numLinhas)
+        internal string[] GeraRegistroMovimento(int numLinhas)
         {
             var texto = new List<string>();
             var linha = string.Empty;
@@ -162,7 +162,7 @@ namespace Aplicacao_CNAB
             return texto.ToArray();
         }
 
-        private string[] GeraRegistroMovimentoMsg()
+        internal string[] GeraRegistroMovimentoMsg()
         {
             var texto = string.Empty;
             //
@@ -215,15 +215,15 @@ namespace Aplicacao_CNAB
             txtbox46.Text = $@"{DateTime.Now.Date:dd/MM/yyyy}";
         }
 
-        private string GeraNumeroSeqRegistro(int incremento)
+        internal string GeraNumeroSeqRegistro(int incremento)
         {
             _numSeqReg = incremento;
             return _numSeqReg.ToString();
         }
 
-        private string AtivaRadioButtonRegHeader() => radioButton1.Checked ? "033" : "353";
+        internal string AtivaRadioButtonRegHeader() => radioButton1.Checked ? "033" : "353";
 
-        private string AtivaRadioButtonRegMovimento() => radioButton3.Checked ? "033" : "353";
+        internal string AtivaRadioButtonRegMovimento() => radioButton3.Checked ? "033" : "353";
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -243,7 +243,7 @@ namespace Aplicacao_CNAB
             CheckBox1.Enabled = true;
         }
 
-        private string RetornaCheckBoxInscricaoCedente() => CheckBox1.Checked ? "01" : "02";
+        internal string RetornaCheckBoxInscricaoCedente() => CheckBox1.Checked ? "01" : "02";
 
         private void CheckBox4_CheckedChanged(object sender, EventArgs e)
         {
@@ -263,9 +263,9 @@ namespace Aplicacao_CNAB
             CheckBox3.Enabled = true;
         }
 
-        private string RetornaCheckBoxTipoInscricaoSacado() => CheckBox3.Checked ? "01" : "02";
+        internal string RetornaCheckBoxTipoInscricaoSacado() => CheckBox3.Checked ? "01" : "02";
 
-        private int GeraMinLinhaRegMov(string str) => string.IsNullOrEmpty(str.Trim('0')) ? 1 : int.Parse(str.TrimStart('0'));
+        internal int GeraMinLinhaRegMov(string str) => string.IsNullOrEmpty(str.Trim('0')) ? 1 : int.Parse(str.TrimStart('0'));
 
         private void txtbox80_KeyPress(object sender, KeyPressEventArgs e)
         {

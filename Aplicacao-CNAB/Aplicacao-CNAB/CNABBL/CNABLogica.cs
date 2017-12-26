@@ -133,7 +133,7 @@ namespace Aplicacao_CNAB.CNABBL
             return randomico;
         }
 
-        /* public static int GeraNumerosRandomicamente(int qtdNumeros)
+        public static int GeraNumerosRandomicamente(int qtdNumeros)
         {
             Thread.Sleep(1);
             //
@@ -143,7 +143,7 @@ namespace Aplicacao_CNAB.CNABBL
 
             numeros.Embaralhar();
             return int.Parse(string.Join(",", numeros).Replace(",", "")); ;
-        } */
+        }
 
         public string GeraNomeArquivo() => $"CNAB_{DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss", CultureInfo.InvariantCulture)}.txt";
 
@@ -199,15 +199,9 @@ namespace Aplicacao_CNAB.CNABBL
             return numVerificador;
         }
 
-        public string[] TransformaMatrizEmListas(List<string[]> matriz)
-        {
-            return matriz.SelectMany(listas => listas).ToArray();
-        }
+        public string[] TransformaMatrizEmListas(List<string[]> matriz) => matriz.SelectMany(listas => listas).ToArray();
 
-        public string ConverteRegistros(string[] registros)
-        {
-            return registros.Aggregate(string.Empty, (texto, registro) => texto + (registro + "\n"));
-        }
+        public string ConverteRegistros(string[] registros) => registros.Aggregate(string.Empty, (texto, registro) => texto + (registro + "\n"));
 
         public bool IsNullOrEmpty(List<string[]> arrStr)
         {
