@@ -215,6 +215,7 @@ namespace Aplicacao_CNAB
             this.Label83 = new System.Windows.Forms.Label();
             this.txtbox66 = new System.Windows.Forms.TextBox();
             this.TabPage4 = new System.Windows.Forms.TabPage();
+            this.bt6 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.txtbox80 = new System.Windows.Forms.TextBox();
             this.Label84 = new System.Windows.Forms.Label();
@@ -971,6 +972,7 @@ namespace Aplicacao_CNAB
             this.bt2.TabIndex = 116;
             this.bt2.Text = "Anterior";
             this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // bt3
             // 
@@ -980,6 +982,7 @@ namespace Aplicacao_CNAB
             this.bt3.TabIndex = 115;
             this.bt3.Text = "Próximo";
             this.bt3.UseVisualStyleBackColor = true;
+            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // txtbox61
             // 
@@ -1935,6 +1938,7 @@ namespace Aplicacao_CNAB
             this.bt4.TabIndex = 141;
             this.bt4.Text = "Anterior";
             this.bt4.UseVisualStyleBackColor = true;
+            this.bt4.Click += new System.EventHandler(this.bt4_Click);
             // 
             // txtbox78
             // 
@@ -2165,8 +2169,9 @@ namespace Aplicacao_CNAB
             this.bt5.Name = "bt5";
             this.bt5.Size = new System.Drawing.Size(88, 40);
             this.bt5.TabIndex = 116;
-            this.bt5.Text = "Proximo";
+            this.bt5.Text = "Próximo";
             this.bt5.UseVisualStyleBackColor = true;
+            this.bt5.Click += new System.EventHandler(this.bt5_Click);
             // 
             // Label83
             // 
@@ -2188,6 +2193,7 @@ namespace Aplicacao_CNAB
             // 
             // TabPage4
             // 
+            this.TabPage4.Controls.Add(this.bt6);
             this.TabPage4.Controls.Add(this.btn4);
             this.TabPage4.Controls.Add(this.txtbox80);
             this.TabPage4.Controls.Add(this.Label84);
@@ -2199,6 +2205,16 @@ namespace Aplicacao_CNAB
             this.TabPage4.TabIndex = 3;
             this.TabPage4.Text = "Gerar Arquivo";
             this.TabPage4.UseVisualStyleBackColor = true;
+            // 
+            // bt6
+            // 
+            this.bt6.Location = new System.Drawing.Point(666, 371);
+            this.bt6.Name = "bt6";
+            this.bt6.Size = new System.Drawing.Size(88, 40);
+            this.bt6.TabIndex = 142;
+            this.bt6.Text = "Anterior";
+            this.bt6.UseVisualStyleBackColor = true;
+            this.bt6.Click += new System.EventHandler(this.bt6_Click);
             // 
             // btn4
             // 
@@ -2267,6 +2283,7 @@ namespace Aplicacao_CNAB
             this.TabPage4.ResumeLayout(false);
             this.TabPage4.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -2459,5 +2476,6 @@ namespace Aplicacao_CNAB
         internal System.Windows.Forms.Button btn2;
         internal System.Windows.Forms.DateTimePicker txtbox46;
         internal Button btn4;
+        private Button bt6;
     }
 }

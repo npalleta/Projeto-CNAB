@@ -280,11 +280,6 @@ namespace Aplicacao_CNAB
             }
         }
 
-        private void bt1_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void btn2_Click(object sender, EventArgs e)
         {
             try
@@ -332,6 +327,36 @@ namespace Aplicacao_CNAB
             _listaRegistroMovimento.Add(GeraRegistroMovimento(GeraMinLinhaRegMov(txtbox80.Text)));
             MessageBox.Show(@"Linha(s) adicionada(s) com sucesso!", @"Registro Movimento", MessageBoxButtons.OK, MessageBoxIcon.None);
             txtbox80.Text = string.Empty;
+        }
+
+        private void bt1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bt2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void bt3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage3;
+        }
+
+        private void bt4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bt5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = TabPage4;
+        }
+
+        private void bt6_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage3;
         }
     }
 }
